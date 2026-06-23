@@ -1,7 +1,9 @@
 {
   "LayoutMetadata": {
-    "title": "",
-    "description": ""
+    "title": "English",
+    "description": "Refrio is the ideal partner to support your company in the logistics operation of warehousing, picking, and distribution of various types of products. With state-of-the-art technology, we have equipment to move and maintain food within the strictest quality standards and at any temperature. [...] » See more"
   },
-  "/": {}
+  "/": {
+    "helloworld": "Hello, World!"
+  }
 }

@@ -1,7 +1,9 @@
 {
   "LayoutMetadata": {
-    "title": "",
-    "description": ""
+    "title": "Português",
+    "description": "A Refrio é o parceiro ideal para apoiar a sua empresa na operação logística de armazenagem, picking e distribuição de diversos tipos de produtos. Com tecnologia de última geração, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura. [...] » Veja mais"
   },
-  "/": {}
+  "/": {
+    "helloworld": "Olá, Mundo!"
+  }
 }
