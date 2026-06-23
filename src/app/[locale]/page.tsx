@@ -1,6 +1,11 @@
-import { useTranslations } from "next-intl";
+"use client";
+
+import Navbar from "@/components/feature/Navbar";
 
 export default function HomePage() {
-  const t = useTranslations("/");
-  return <div>{t("helloworld")}</div>;
+  return (
+    <main>
+      <Navbar />
+    </main>
+  );
 }
