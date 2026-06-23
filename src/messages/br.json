@@ -1,9 +1,11 @@
 {
   "LayoutMetadata": {
-    "title": "Português",
-    "description": "A Refrio é o parceiro ideal para apoiar a sua empresa na operação logística de armazenagem, picking e distribuição de diversos tipos de produtos. Com tecnologia de última geração, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura. [...] » Veja mais"
+    "title": "Refrio | Proposta de Modernização de Presença Digital | Por Erik H. A. Lima",
+    "description": "Olá mundo! Este website é um projeto desenvolvido para melhorar a experiência dos usuários e potenciais clientes ao acessar o portfólio da Refrio. Criado por Erik H. A. Lima - GitHub: https://github.com/erikhenriqueal/refrio-modernization-porposal"
   },
-  "/": {
-    "helloworld": "Olá, Mundo!"
+  "Navbar": {
+    "btn-01": "Empresa",
+    "btn-02": "Atuação",
+    "btn-03": "Contato"
   }
 }

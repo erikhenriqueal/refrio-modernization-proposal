@@ -1,9 +1,11 @@
 {
   "LayoutMetadata": {
-    "title": "English",
-    "description": "Refrio is the ideal partner to support your company in the logistics operation of warehousing, picking, and distribution of various types of products. With state-of-the-art technology, we have equipment to move and maintain food within the strictest quality standards and at any temperature. [...] » See more"
+    "title": "Refrio | Digital Presence Modernization Proposal | Por Erik H. A. Lima",
+    "description": "Hello world! This website is a project developed to upgrade the experience of users and potential customers when accessing the Refrio's portfolio. Created by Erik H. A. Lima - GitHub: https://github.com/erikhenriqueal/refrio-modernization-porposal"
   },
-  "/": {
-    "helloworld": "Hello, World!"
+  "Navbar": {
+    "btn-01": "About Us",
+    "btn-02": "Operation",
+    "btn-03": "Contact"
   }
 }
