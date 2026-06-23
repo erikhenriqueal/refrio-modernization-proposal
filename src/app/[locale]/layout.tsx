@@ -1,5 +1,19 @@
 import "@/app/globals.css";
 
+import { Plus_Jakarta_Sans } from "next/font/google";
+
+const PlusJakartaSansFont = Plus_Jakarta_Sans({
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  subsets: ["latin-ext"],
+  preload: true,
+});
+
+// const ManropeFont = Manrope({
+//   weight: ["200", "300", "400", "500", "600", "700", "800"],
+//   subsets: ["latin-ext"],
+//   preload: true,
+// });
+
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -41,7 +55,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang="en" className={`h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${PlusJakartaSansFont.className} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
           {children}
