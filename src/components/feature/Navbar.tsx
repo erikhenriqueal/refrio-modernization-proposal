@@ -36,8 +36,8 @@ export default function Navbar() {
         <Image
           src={"/refrio-logo.png"}
           alt="Refrio Logo"
-          width={330 * 0.75}
-          height={106 * 0.75}
+          width={200}
+          height={64}
           loading={"lazy"}
           className="pointer-events-none select-none"
           draggable={false}
