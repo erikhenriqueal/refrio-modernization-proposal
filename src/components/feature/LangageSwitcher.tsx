@@ -20,7 +20,7 @@ function SwitcherButton({
       className={`
         h-full p-2 aspect-square rounded-full border-2 shadow-md shadow-primary-900/35 cursor-pointer outline-none
         transition-colors ease-in-out duration-100
-        border-primary-100
+        bg-neutral-50 border-primary-100
         hover:bg-primary-100 hover:border-primary-100
         active:*:scale-95
         `}
