@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 
 import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
+import { Anchor } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
@@ -82,6 +83,17 @@ export default function HomePage() {
                 })}
               </h1>
               <h2 className="text-xl font-semibold">{t("slogan-subtitle")}</h2>
+            </div>
+          </div>
+          {/* CTA */}
+          <div>
+            <div className="w-fit py-4 mx-auto space-x-8">
+              <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
+                Conheça nossa atuação
+              </Anchor>
+              <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
+                Entre em contato
+              </Anchor>
             </div>
           </div>
           {/* Carousel */}
