@@ -78,12 +78,12 @@ export function Carousel({
   }, [emblaApi]);
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full flex flex-col">
       <div
         ref={emblaRef}
-        className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+        className="h-full overflow-hidden cursor-grab active:cursor-grabbing select-none"
       >
-        <div className="flex">
+        <div className="h-full flex">
           {slides.map((slide, i) => (
             <div key={i} className="px-2 shrink-0 basis-[85%]">
               {slide(i === selectedIndex)}
