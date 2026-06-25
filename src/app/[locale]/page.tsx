@@ -7,24 +7,6 @@ import { Carousel } from "@/components/ui/carousel";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 
-const slides = [
-  {
-    id: 1,
-    imgUrl: "/slider-home-1.jpg",
-    text: "Infra-estrutura para armazenar variados tipos de produtos, em qualquer temperatura",
-  },
-  {
-    id: 2,
-    imgUrl: "/slider-home-2.jpg",
-    text: "Linha 100% mecanizada que garante agilidade e segurança na movimentação de carga",
-  },
-  {
-    id: 3,
-    imgUrl: "/slider-home-3.jpg",
-    text: "Mais de 800 mil m³ de instalações amplas e reversíveis",
-  },
-];
-
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
   const colors = ["text-green-600", "text-blue-700", "text-amber-500"];
   const chars = chunks?.toString().split("") ?? [];
@@ -43,6 +25,25 @@ const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+
+  const slides = [
+    {
+      id: 1,
+      imgUrl: "/slider-home-1.jpg",
+      text: t("slider-home-01"),
+    },
+    {
+      id: 2,
+      imgUrl: "/slider-home-2.jpg",
+      text: t("slider-home-02"),
+    },
+    {
+      id: 3,
+      imgUrl: "/slider-home-3.jpg",
+      text: t("slider-home-03"),
+    },
+  ];
+
   return (
     <>
       <Navbar />
