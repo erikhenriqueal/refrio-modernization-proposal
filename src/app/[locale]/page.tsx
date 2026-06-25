@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
+import { useTranslations } from "next-intl";
 
 const slides = [
   {
@@ -23,7 +24,24 @@ const slides = [
   },
 ];
 
+const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
+  const colors = ["text-green-600", "text-blue-700", "text-amber-500"];
+  const chars = chunks?.toString().split("") ?? [];
+  return (
+    <span>
+      <span>
+        {chars.map((c, i) => (
+          <span key={i} className={colors[i % colors.length]}>
+            {c}
+          </span>
+        ))}
+      </span>
+    </span>
+  );
+};
+
 export default function HomePage() {
+  const t = useTranslations("HomePage");
   return (
     <>
       <Navbar />
@@ -34,22 +52,14 @@ export default function HomePage() {
           <div>
             <div className="text-center space-y-4 px-2">
               <h1 className="text-3xl font-bold">
-                Refrigerando o{" "}
-                <span>
-                  <span className="text-green-600">B</span>
-                  <span className="text-blue-700">r</span>
-                  <span className="text-amber-500">a</span>
-                  <span className="text-green-600">s</span>
-                  <span className="text-blue-700">i</span>
-                  <span className="text-amber-500">l</span>
-                </span>{" "}
-                com <span className="text-primary-600">excelência</span> e{" "}
-                <span className="text-primary-600">inovação</span>.
+                {t.rich("slogan-title", {
+                  brazil: (chunks) => <BrazilWord chunks={chunks} />,
+                  highlight: (chunks) => (
+                    <span className="text-primary-600">{chunks}</span>
+                  ),
+                })}
               </h1>
-              <h2 className="text-xl font-semibold">
-                Há décadas oferecendo soluções inteligentes para a cadeia de
-                refrigeração nacional.
-              </h2>
+              <h2 className="text-xl font-semibold">{t("slogan-subtitle")}</h2>
             </div>
           </div>
           {/* Carousel */}

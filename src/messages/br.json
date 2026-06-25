@@ -7,5 +7,9 @@
     "btn-01": "Empresa",
     "btn-02": "Atuação",
     "btn-03": "Contato"
+  },
+  "HomePage": {
+    "slogan-title": "Refrigerando o <brazil>Brasil</brazil> com <highlight>excelência</highlight> e <highlight>inovação</highlight>.",
+    "slogan-subtitle": "Há décadas oferecendo soluções inteligentes para a cadeia de refrigeração nacional."
   }
 }
