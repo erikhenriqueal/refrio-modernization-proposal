@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { motion } from "motion/react";
 
 import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
-import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
+import { useEffect, useRef } from "react";
 
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
   const colors = ["text-green-600", "text-blue-700", "text-amber-500"];
@@ -24,6 +25,23 @@ const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
 };
 
 export default function HomePage() {
+  const navContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = navContainerRef.current;
+    if (!el) return;
+
+    const update = () =>
+      document.documentElement.style.setProperty(
+        "--navbar-h",
+        `${el.offsetHeight}px`,
+      );
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   const t = useTranslations("HomePage");
 
   const slides = [
@@ -46,10 +64,12 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
+      <div ref={navContainerRef}>
+        <Navbar />
+      </div>
       <main className="p-2">
         {/* Hero */}
-        <section className="space-y-4">
+        <section className="h-[calc(100dvh-var(--navbar-h,0px))] flex flex-col py-4 gap-4">
           {/* Slogan/Presentation */}
           <div>
             <div className="text-center space-y-4 px-2">
@@ -65,14 +85,14 @@ export default function HomePage() {
             </div>
           </div>
           {/* Carousel */}
-          <div className="max-h-96">
+          <div className="flex-1 min-h-0 h-full">
             <Carousel
               slides={slides.map(
                 (slide, i) =>
                   function Slide(isActive) {
                     return (
-                      <div key={i} className="relative">
-                        <div className="absolute w-full h-max px-8 top-0 mt-4">
+                      <div key={i} className="relative h-full">
+                        <div className="absolute w-full h-max px-8 top-0 mt-4 z-10">
                           <motion.span
                             className="block px-2 py-4 text-center text-2xl/tight text-neutral-50 bg-neutral-900/75 backdrop-blur-xs rounded-2xl"
                             initial={{ opacity: 0, y: -8 }}
@@ -87,11 +107,11 @@ export default function HomePage() {
                           </motion.span>
                         </div>
                         <Image
-                          className="rounded-4xl"
                           src={slide.imgUrl}
                           alt={slide.imgUrl.slice(1)}
-                          width={1920}
-                          height={1275}
+                          className="h-full rounded-4xl object-cover aspect-1920/1275"
+                          sizes="85vw"
+                          fill
                           loading="eager"
                           draggable="false"
                         />
