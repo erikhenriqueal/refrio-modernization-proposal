@@ -3,24 +3,23 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
+import { useEffect, useRef } from "react";
 
 import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
 import { Anchor } from "@/components/ui/button";
-import { useEffect, useRef } from "react";
 
+/** Colorize `chunks` using the pattern `green`, `blue`, `yellow`... */
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
   const colors = ["text-green-600", "text-blue-700", "text-amber-500"];
   const chars = chunks?.toString().split("") ?? [];
   return (
     <span>
-      <span>
-        {chars.map((c, i) => (
-          <span key={i} className={colors[i % colors.length]}>
-            {c}
-          </span>
-        ))}
-      </span>
+      {chars.map((c, i) => (
+        <span key={i} className={colors[i % colors.length]}>
+          {c}
+        </span>
+      ))}
     </span>
   );
 };
@@ -28,6 +27,7 @@ const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
 export default function HomePage() {
   const navContainerRef = useRef<HTMLDivElement>(null);
 
+  // Create CSS `--navbar-h` height after loading
   useEffect(() => {
     const el = navContainerRef.current;
     if (!el) return;
@@ -72,29 +72,25 @@ export default function HomePage() {
         {/* Hero */}
         <section className="h-[calc(100dvh-var(--navbar-h,0px))] flex flex-col py-4 gap-4">
           {/* Slogan/Presentation */}
-          <div>
-            <div className="text-center space-y-4 px-2">
-              <h1 className="text-3xl font-bold">
-                {t.rich("slogan-title", {
-                  brazil: (chunks) => <BrazilWord chunks={chunks} />,
-                  highlight: (chunks) => (
-                    <span className="text-primary-600">{chunks}</span>
-                  ),
-                })}
-              </h1>
-              <h2 className="text-xl font-semibold">{t("slogan-subtitle")}</h2>
-            </div>
+          <div className="text-center space-y-4 px-2">
+            <h1 className="text-3xl font-bold">
+              {t.rich("slogan-title", {
+                brazil: (chunks) => <BrazilWord chunks={chunks} />,
+                highlight: (chunks) => (
+                  <span className="text-primary-600">{chunks}</span>
+                ),
+              })}
+            </h1>
+            <h2 className="text-xl font-semibold">{t("slogan-subtitle")}</h2>
           </div>
           {/* CTA */}
-          <div>
-            <div className="w-fit py-4 mx-auto space-x-8">
-              <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
-                Conheça nossa atuação
-              </Anchor>
-              <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
-                Entre em contato
-              </Anchor>
-            </div>
+          <div className="px-2 flex flex-wrap gap-x-8 gap-y-2 justify-center text-center">
+            <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
+              Conheça nossa atuação
+            </Anchor>
+            <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
+              Entre em contato
+            </Anchor>
           </div>
           {/* Carousel */}
           <div className="flex-1 min-h-0 h-full">
@@ -106,14 +102,14 @@ export default function HomePage() {
                       <div key={i} className="relative h-full">
                         <div className="absolute w-full h-max px-8 top-0 mt-4 z-10">
                           <motion.span
-                            className="block px-2 py-4 text-center text-2xl/tight text-neutral-50 bg-neutral-900/75 backdrop-blur-xs rounded-2xl"
+                            className="block px-2 py-4 text-center text-2xl/tight text-neutral-50 bg-neutral-900/50 backdrop-blur-xs rounded-2xl"
                             initial={{ opacity: 0, y: -8 }}
                             animate={
                               isActive
                                 ? { opacity: 1, y: 0 }
                                 : { opacity: 0, y: -8 }
                             }
-                            transition={{ duration: 0.35, ease: "easeOut" }}
+                            transition={{ duration: 1, ease: "easeOut" }}
                           >
                             {slide.text}
                           </motion.span>
