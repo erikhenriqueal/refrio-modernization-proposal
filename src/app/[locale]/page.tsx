@@ -5,6 +5,7 @@ import Image from "next/image";
 import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
 import { useTranslations } from "next-intl";
+import { motion } from "motion/react";
 
 const slides = [
   {
@@ -65,24 +66,38 @@ export default function HomePage() {
           {/* Carousel */}
           <div className="max-h-96">
             <Carousel
-              slides={slides.map((slide, i) => (
-                <div key={i} className="relative">
-                  <div className="absolute w-full h-max px-8 top-0 mt-4">
-                    <span className="block px-2 py-4 text-center text-2xl/tight text-neutral-50 bg-neutral-900/75 backdrop-blur-xs rounded-2xl">
-                      {slide.text}
-                    </span>
-                  </div>
-                  <Image
-                    className="rounded-4xl"
-                    src={slide.imgUrl}
-                    alt={slide.imgUrl.slice(1)}
-                    width={1920}
-                    height={1275}
-                    loading="eager"
-                    draggable="false"
-                  />
-                </div>
-              ))}
+              slides={slides.map(
+                (slide, i) =>
+                  function Slide(isActive) {
+                    return (
+                      <div key={i} className="relative">
+                        <div className="absolute w-full h-max px-8 top-0 mt-4">
+                          <motion.span
+                            className="block px-2 py-4 text-center text-2xl/tight text-neutral-50 bg-neutral-900/75 backdrop-blur-xs rounded-2xl"
+                            initial={{ opacity: 0, y: -8 }}
+                            animate={
+                              isActive
+                                ? { opacity: 1, y: 0 }
+                                : { opacity: 0, y: -8 }
+                            }
+                            transition={{ duration: 0.35, ease: "easeOut" }}
+                          >
+                            {slide.text}
+                          </motion.span>
+                        </div>
+                        <Image
+                          className="rounded-4xl"
+                          src={slide.imgUrl}
+                          alt={slide.imgUrl.slice(1)}
+                          width={1920}
+                          height={1275}
+                          loading="eager"
+                          draggable="false"
+                        />
+                      </div>
+                    );
+                  },
+              )}
             />
           </div>
         </section>
