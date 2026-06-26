@@ -4,7 +4,11 @@ import Autoplay from "embla-carousel-autoplay";
 
 const AUTOPLAY_DELAY = 3000;
 
-export function Carousel({ slides }: { slides: React.ReactNode[] }) {
+export function Carousel({
+  slides,
+}: {
+  slides: ((isActive: boolean) => React.ReactNode)[];
+}) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({
       active: true,
@@ -74,15 +78,15 @@ export function Carousel({ slides }: { slides: React.ReactNode[] }) {
   }, [emblaApi]);
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full flex flex-col">
       <div
         ref={emblaRef}
-        className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+        className="h-full overflow-hidden cursor-grab active:cursor-grabbing select-none"
       >
-        <div className="flex">
+        <div className="h-full flex">
           {slides.map((slide, i) => (
             <div key={i} className="px-2 shrink-0 basis-[85%]">
-              {slide}
+              {slide(i === selectedIndex)}
             </div>
           ))}
         </div>
