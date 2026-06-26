@@ -3,11 +3,14 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import { BsAward, BsBoxSeam, BsCpu, BsDice5 } from "react-icons/bs";
+import { IconType } from "react-icons";
 
 import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
 import { Anchor } from "@/components/ui/button";
+import { MultiSide } from "@/components/ui/multiside";
 
 /** Colorize `chunks` using the pattern `green`, `blue`, `yellow`... */
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
@@ -23,6 +26,13 @@ const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
     </span>
   );
 };
+
+const DescriptionItem = ({ icon, text }: { icon: IconType; text: string }) => (
+  <>
+    <div className="w-max px-4">{icon({ size: "6rem" })}</div>
+    <p className="w-full text-lg/tight hyphens-auto">{text}</p>
+  </>
+);
 
 export default function HomePage() {
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -128,6 +138,33 @@ export default function HomePage() {
                   },
               )}
             />
+          </div>
+        </section>
+        {/* Description */}
+        <section id="business">
+          <div>
+            <MultiSide className="gap-8">
+              {/* Item 1 - Left */}
+              <DescriptionItem
+                icon={BsBoxSeam}
+                text="A Refrio é o parceiro ideal para apoiar a sua logística de armazenagem, picking e distribuição de diversos tipos de produtos."
+              />
+              {/* Item 2 - Right */}
+              <DescriptionItem
+                icon={BsCpu}
+                text="Com tecnologia de ponta, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura."
+              />
+              {/* Item 3 - Left */}
+              <DescriptionItem
+                icon={BsDice5}
+                text="Nossos sistemas de informação modernos e eficientes possibilitam o gerenciamento dos produtos armazenados."
+              />
+              {/* Item 4 - Right */}
+              <DescriptionItem
+                icon={BsAward}
+                text="Com 40 anos de atuação no mercado, somos uma empresa completa, ágil e moderna, com atuação em todo o país."
+              />
+            </MultiSide>
           </div>
         </section>
       </main>
