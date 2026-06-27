@@ -1,16 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import React, { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
-import React, { useEffect, useRef } from "react";
 import { BsAward, BsBoxSeam, BsCpu, BsDice5 } from "react-icons/bs";
 import { IconType } from "react-icons";
 
-import Navbar from "@/components/feature/Navbar";
 import { Carousel } from "@/components/ui/carousel";
 import { Anchor } from "@/components/ui/button";
 import { MultiSide } from "@/components/ui/multiside";
+
+import Navbar from "@/components/feature/Navbar";
 
 /** Colorize `chunks` using the pattern `green`, `blue`, `yellow`... */
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
@@ -141,9 +142,9 @@ export default function HomePage() {
           </div>
         </section>
         {/* Description */}
-        <section id="business">
-          <div>
-            <MultiSide className="gap-8">
+        <section id="brand">
+          <div className="mt-8">
+            <MultiSide className="gap-x-12 gap-y-8 *:max-w-sm">
               {/* Item 1 - Left */}
               <DescriptionItem
                 icon={BsBoxSeam}
