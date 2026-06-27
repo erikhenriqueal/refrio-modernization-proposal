@@ -38,6 +38,10 @@ export async function generateMetadata({
   };
 }
 
+const NormalizedHTMLLangs = {
+  br: "pt-BR"
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -56,7 +60,7 @@ export default async function LocaleLayout({
 
   return (
     <html
-      lang="en"
+      lang={locale in }
       className={`${PlusJakartaSansFont.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
