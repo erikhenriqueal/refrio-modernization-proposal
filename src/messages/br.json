@@ -7,5 +7,13 @@
     "btn-01": "Empresa",
     "btn-02": "Atuação",
     "btn-03": "Contato"
+  },
+  "HomePage": {
+    "slogan-title": "Refrigerando o <brazil>Brasil</brazil> com <highlight>excelência</highlight> e <highlight>inovação</highlight>.",
+    "slogan-subtitle": "Há décadas oferecendo soluções inteligentes para a cadeia de refrigeração nacional.",
+
+    "slider-home-01": "Infra-estrutura para armazenar variados tipos de produtos, em qualquer temperatura",
+    "slider-home-02": "Linha 100% mecanizada que garante agilidade e segurança na movimentação de carga",
+    "slider-home-03": "Mais de 800 mil m³ de instalações amplas e reversíveis"
   }
 }

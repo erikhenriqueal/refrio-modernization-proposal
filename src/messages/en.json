@@ -7,5 +7,13 @@
     "btn-01": "About Us",
     "btn-02": "Operation",
     "btn-03": "Contact"
+  },
+  "HomePage": {
+    "slogan-title": "Cooling <brazil>Brazil</brazil> with <highlight>excellence</highlight> and <highlight>innovation</highlight>.",
+    "slogan-subtitle": "Providing smart solutions for the national cooling chain for decades.",
+
+    "slider-home-01": "Infrastructure for storing various types of products at any temperature",
+    "slider-home-02": "100% mechanized line ensuring speed and safety in cargo handling",
+    "slider-home-03": "Over 800,000 m³ of spacious, reversible facilities"
   }
 }

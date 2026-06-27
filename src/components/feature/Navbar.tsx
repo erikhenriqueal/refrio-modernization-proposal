@@ -4,29 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import LanguageSwitcher from "./LangageSwitcher";
-
-function NavbarAnchor({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      className={`
-              relative p-2
-              transition-colors duration-200 ease-out
-              after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2] after:origin-left after:scale-x-0 after:bg-primary-600
-              after:transition after:duration-200 after:ease-out
-              hover:text-primary-600 hover:after:scale-x-100
-            `}
-    >
-      {children}
-    </a>
-  );
-}
+import { Anchor } from "../ui/button";
 
 export default function Navbar() {
   const t = useTranslations("Navbar");
@@ -45,13 +23,19 @@ export default function Navbar() {
       </a>
       <ul className="text-xl font-bold flex flex-row gap-4 items-center">
         <li>
-          <NavbarAnchor href="#">{t("btn-01")}</NavbarAnchor>
+          <Anchor variant="underline" href="#">
+            {t("btn-01")}
+          </Anchor>
         </li>
         <li>
-          <NavbarAnchor href="#">{t("btn-02")}</NavbarAnchor>
+          <Anchor variant="underline" href="#">
+            {t("btn-02")}
+          </Anchor>
         </li>
         <li>
-          <NavbarAnchor href="#">{t("btn-03")}</NavbarAnchor>
+          <Anchor variant="underline" href="#">
+            {t("btn-03")}
+          </Anchor>
         </li>
         <li>
           <LanguageSwitcher />

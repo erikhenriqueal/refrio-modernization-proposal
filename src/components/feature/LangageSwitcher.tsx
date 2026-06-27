@@ -1,34 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FlagComponent, US, BR } from "country-flag-icons/react/3x2";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
 import { useLanguageSwitcher } from "@/i18n/client";
 import { routing } from "@/i18n/routing";
 
-import { motion, AnimatePresence } from "motion/react";
-
-function SwitcherButton({
-  onClick,
-  children,
-}: {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`
-        h-full p-2 aspect-square rounded-full border-2 shadow-md shadow-primary-900/35 cursor-pointer outline-none
-        transition-colors ease-in-out duration-100
-        bg-neutral-50 border-primary-100
-        hover:bg-primary-100 hover:border-primary-100
-        active:*:scale-95
-        `}
-    >
-      {children}
-    </button>
-  );
-}
+import { Button } from "../ui/button";
 
 export interface LanguageObject {
   label: string;
@@ -63,12 +41,16 @@ export default function LanguageSwitcher() {
   return (
     <div className="h-full relative">
       {/* Selected */}
-      <SwitcherButton onClick={() => setOpen(!isOpen)}>
+      <Button
+        variant="secondary"
+        shapes={["roundy", "square"]}
+        onClick={() => setOpen(!isOpen)}
+      >
         <actualLang.icon
           height={16}
           className="rounded-xs transition-[scale] ease-out duration-100"
         />
-      </SwitcherButton>
+      </Button>
       {/* Options */}
       <div className="absolute bottom-0 translate-y-[calc(100%+0.5rem)]">
         <AnimatePresence>
@@ -85,12 +67,17 @@ export default function LanguageSwitcher() {
                 .map((l, i) => {
                   const lang = Languages[l];
                   return (
-                    <SwitcherButton key={i} onClick={() => switchLanguage(l)}>
+                    <Button
+                      key={i}
+                      variant="secondary"
+                      shapes={["roundy", "square"]}
+                      onClick={() => switchLanguage(l)}
+                    >
                       <lang.icon
                         height={16}
                         className="rounded-xs transition-[scale] ease-out duration-100"
                       />
-                    </SwitcherButton>
+                    </Button>
                   );
                 })}
             </motion.div>
