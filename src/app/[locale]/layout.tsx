@@ -65,7 +65,7 @@ export default async function LocaleLayout({
           ? NormalizedHTMLLangs[locale as keyof typeof NormalizedHTMLLangs]
           : locale
       }
-      className={`${PlusJakartaSansFont.className} min-h-dvh w-dvw antialiased`}
+      className={`${PlusJakartaSansFont.className} min-h-svh max-w-svw antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
