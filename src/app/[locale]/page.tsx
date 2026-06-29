@@ -4,7 +4,22 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
-import { BsAward, BsBoxSeam, BsCpu, BsDice5 } from "react-icons/bs";
+import {
+  BsAward,
+  BsBoxSeam,
+  BsClipboard2Data,
+  BsClockHistory,
+  BsCompass,
+  BsCpu,
+  BsDice5,
+  BsGlobeAmericas,
+  BsStar,
+  BsTelephone,
+  BsThermometerSnow,
+} from "react-icons/bs";
+import { SlCalculator } from "react-icons/sl";
+import { LiaPalletSolid } from "react-icons/lia";
+import { BiBarChartAlt } from "react-icons/bi";
 import { IconType } from "react-icons";
 
 import { Carousel } from "@/components/ui/carousel";
@@ -12,6 +27,7 @@ import { Anchor } from "@/components/ui/button";
 import { MultiSide } from "@/components/ui/multiside";
 
 import Navbar from "@/components/feature/Navbar";
+import SolutionCard from "@/components/feature/SolutionCard";
 
 /** Colorize `chunks` using the pattern `green`, `blue`, `yellow`... */
 const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
@@ -30,7 +46,9 @@ const BrazilWord = ({ chunks }: { chunks: React.ReactNode }) => {
 
 const DescriptionItem = ({ icon, text }: { icon: IconType; text: string }) => (
   <>
-    <div className="w-max px-4">{icon({ size: "6rem" })}</div>
+    <div className="w-max px-4">
+      {icon({ size: "6rem", className: "fill-primary-600" })}
+    </div>
     <p className="w-full text-lg/tight hyphens-auto">{text}</p>
   </>
 );
@@ -143,29 +161,98 @@ export default function HomePage() {
         </section>
         {/* Description */}
         <section id="brand">
-          <div className="mt-8">
-            <MultiSide className="gap-x-12 gap-y-8 *:max-w-sm">
-              {/* Item 1 - Left */}
-              <DescriptionItem
-                icon={BsBoxSeam}
-                text="A Refrio é o parceiro ideal para apoiar a sua logística de armazenagem, picking e distribuição de diversos tipos de produtos."
-              />
-              {/* Item 2 - Right */}
-              <DescriptionItem
-                icon={BsCpu}
-                text="Com tecnologia de ponta, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura."
-              />
-              {/* Item 3 - Left */}
-              <DescriptionItem
-                icon={BsDice5}
-                text="Nossos sistemas de informação modernos e eficientes possibilitam o gerenciamento dos produtos armazenados."
-              />
-              {/* Item 4 - Right */}
-              <DescriptionItem
-                icon={BsAward}
-                text="Com 40 anos de atuação no mercado, somos uma empresa completa, ágil e moderna, com atuação em todo o país."
-              />
-            </MultiSide>
+          <h1 className="py-8 text-center text-4xl font-bold text-primary-800">
+            Quem somos?
+          </h1>
+          <MultiSide className="gap-x-12 gap-y-8 *:max-w-sm">
+            {/* Item 1 - Left */}
+            <DescriptionItem
+              icon={BsBoxSeam}
+              text="A Refrio é o parceiro ideal para apoiar a sua logística de armazenagem, picking e distribuição de diversos tipos de produtos."
+            />
+            {/* Item 2 - Right */}
+            <DescriptionItem
+              icon={BsCpu}
+              text="Com tecnologia de ponta, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura."
+            />
+            {/* Item 3 - Left */}
+            <DescriptionItem
+              icon={BsDice5}
+              text="Nossos sistemas de informação modernos e eficientes possibilitam o gerenciamento dos produtos armazenados."
+            />
+            {/* Item 4 - Right */}
+            <DescriptionItem
+              icon={BsAward}
+              text="Com 40 anos de atuação no mercado, somos uma empresa completa, ágil e moderna, com atuação em todo o país."
+            />
+          </MultiSide>
+        </section>
+        {/* Solutions */}
+        <section id="solutions">
+          <h1 className="py-8 text-center text-4xl font-bold text-primary-800">
+            Armazenagem e Picking
+          </h1>
+          <div className="w-full px-4 flex flex-row flex-wrap justify-center gap-6 *:min-w-xs *:max-w-lg">
+            <SolutionCard
+              icon={BsCompass}
+              title="Rastreamento"
+              description="Processos e sistemas, como o WMS, permitem acompanhar em tempo real o estoque, inclusive o rastreamento ponta a ponta."
+              highlight="Tecnologia para ganhar eficiência."
+            />
+            <SolutionCard
+              icon={BiBarChartAlt}
+              title="Gestão de Estoque"
+              description="Todo o estoque é controlado por meio de sistemas integrados de informação e softwares customizados."
+              highlight="Controle eficiente e preciso para os nossos clientes."
+            />
+            <SolutionCard
+              icon={BsClockHistory}
+              title="Processos Ágeis"
+              description="Oferta de soluções eficientes e precisas no segmento logístico de armazenagem e distribuição."
+              highlight="Busca pela excelência nos negócios."
+            />
+            <SolutionCard
+              icon={BsThermometerSnow}
+              title="Congelamento"
+              description="Inclui túneis estruturados para movimentar simultaneamente até 200 toneladas de produtos em temperatura negativa."
+              highlight="Alta capacidade de congelamento."
+            />
+            <SolutionCard
+              icon={SlCalculator}
+              title="Estufagem"
+              description="Atividades de cálculo de pontos de equilíbrio de carga, balanceamento e distribuição de pesos e preenchimento de containers e baús."
+              highlight="Carregamento com segurança."
+            />
+            <SolutionCard
+              icon={BsClipboard2Data}
+              title="Unitização"
+              description="Organização de diversos tipos de cargas de tamanhos e pesos diferentes para aproveitar melhor o espaço."
+              highlight="Mais agilidade e aumento de eficiência."
+            />
+            <SolutionCard
+              icon={LiaPalletSolid}
+              title="Paletização"
+              description="Ordenação das mercadorias unitizadas em pallets para facilitar a armazenagem e o transporte."
+              highlight="Melhor organização e agilidade na distribuição."
+            />
+            <SolutionCard
+              icon={BsStar}
+              title="Kits Promocionais"
+              description="Manuseio de embalagens, serviço de reembalagem e montagem de kits de produtos, incluindo em temperatura controlada."
+              highlight="Serviços diferenciados para sua empresa."
+            />
+            <SolutionCard
+              icon={BsGlobeAmericas}
+              title="Distribuição"
+              description="Malha de distribuição com capacidade para atender todo o Brasil, com frota preparada para transportar todos os tipos de carga."
+              highlight="Distribuição para o crescimento do seu negócio."
+            />
+            <SolutionCard
+              icon={BsTelephone}
+              title="Atendimento"
+              description="Apresentação de soluções rápidas e adequadas aos questionamentos dos clientes."
+              highlight="Agilidade e atendimento eficiente para nossos clientes."
+            />
           </div>
         </section>
       </main>

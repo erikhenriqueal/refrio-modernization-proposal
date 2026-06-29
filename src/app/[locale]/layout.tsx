@@ -39,8 +39,8 @@ export async function generateMetadata({
 }
 
 const NormalizedHTMLLangs = {
-  br: "pt-BR"
-}
+  br: "pt-BR",
+};
 
 export default async function LocaleLayout({
   children,
@@ -60,8 +60,12 @@ export default async function LocaleLayout({
 
   return (
     <html
-      lang={locale in }
-      className={`${PlusJakartaSansFont.className} h-full antialiased`}
+      lang={
+        locale in NormalizedHTMLLangs
+          ? NormalizedHTMLLangs[locale as keyof typeof NormalizedHTMLLangs]
+          : locale
+      }
+      className={`${PlusJakartaSansFont.className} min-h-dvh w-dvw antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
