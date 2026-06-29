@@ -200,22 +200,10 @@ export default function HomePage() {
               highlight="Tecnologia para ganhar eficiência."
             />
             <SolutionCard
-              icon={BiBarChartAlt}
-              title="Gestão de Estoque"
-              description="Todo o estoque é controlado por meio de sistemas integrados de informação e softwares customizados."
-              highlight="Controle eficiente e preciso para os nossos clientes."
-            />
-            <SolutionCard
               icon={BsClockHistory}
               title="Processos Ágeis"
               description="Oferta de soluções eficientes e precisas no segmento logístico de armazenagem e distribuição."
               highlight="Busca pela excelência nos negócios."
-            />
-            <SolutionCard
-              icon={BsThermometerSnow}
-              title="Congelamento"
-              description="Inclui túneis estruturados para movimentar simultaneamente até 200 toneladas de produtos em temperatura negativa."
-              highlight="Alta capacidade de congelamento."
             />
             <SolutionCard
               icon={SlCalculator}
@@ -224,28 +212,40 @@ export default function HomePage() {
               highlight="Carregamento com segurança."
             />
             <SolutionCard
-              icon={BsClipboard2Data}
-              title="Unitização"
-              description="Organização de diversos tipos de cargas de tamanhos e pesos diferentes para aproveitar melhor o espaço."
-              highlight="Mais agilidade e aumento de eficiência."
-            />
-            <SolutionCard
               icon={LiaPalletSolid}
               title="Paletização"
               description="Ordenação das mercadorias unitizadas em pallets para facilitar a armazenagem e o transporte."
               highlight="Melhor organização e agilidade na distribuição."
             />
             <SolutionCard
-              icon={BsStar}
-              title="Kits Promocionais"
-              description="Manuseio de embalagens, serviço de reembalagem e montagem de kits de produtos, incluindo em temperatura controlada."
-              highlight="Serviços diferenciados para sua empresa."
-            />
-            <SolutionCard
               icon={BsGlobeAmericas}
               title="Distribuição"
               description="Malha de distribuição com capacidade para atender todo o Brasil, com frota preparada para transportar todos os tipos de carga."
               highlight="Distribuição para o crescimento do seu negócio."
+            />
+            <SolutionCard
+              icon={BiBarChartAlt}
+              title="Gestão de Estoque"
+              description="Todo o estoque é controlado por meio de sistemas integrados de informação e softwares customizados."
+              highlight="Controle eficiente e preciso para os nossos clientes."
+            />
+            <SolutionCard
+              icon={BsThermometerSnow}
+              title="Congelamento"
+              description="Inclui túneis estruturados para movimentar simultaneamente até 200 toneladas de produtos em temperatura negativa."
+              highlight="Alta capacidade de congelamento."
+            />
+            <SolutionCard
+              icon={BsClipboard2Data}
+              title="Unitização"
+              description="Organização de diversos tipos de cargas de tamanhos e pesos diferentes para aproveitar melhor o espaço."
+              highlight="Mais agilidade e aumento de eficiência."
+            />
+            <SolutionCard
+              icon={BsStar}
+              title="Kits Promocionais"
+              description="Manuseio de embalagens, serviço de reembalagem e montagem de kits de produtos, incluindo em temperatura controlada."
+              highlight="Serviços diferenciados para sua empresa."
             />
             <SolutionCard
               icon={BsTelephone}
