@@ -5,8 +5,11 @@
   },
   "Navbar": {
     "btn-01": "Empresa",
-    "btn-02": "Atuação",
-    "btn-03": "Contato"
+    "btn-02": "Soluções",
+    "btn-02-a": "Armazenagem & Picking",
+    "btn-02-b": "Consultoria",
+    "btn-03": "Atuação",
+    "btn-04": "Contato"
   },
   "HomePage": {
     "slogan-title": "Refrigerando o <brazil>Brasil</brazil> com <highlight>excelência</highlight> e <highlight>inovação</highlight>.",

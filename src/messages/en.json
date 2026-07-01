@@ -5,8 +5,11 @@
   },
   "Navbar": {
     "btn-01": "About Us",
-    "btn-02": "Operation",
-    "btn-03": "Contact"
+    "btn-02": "Solutions",
+    "btn-02-a": "Storage & Picking",
+    "btn-02-b": "Consulting",
+    "btn-03": "Operation",
+    "btn-04": "Contact"
   },
   "HomePage": {
     "slogan-title": "Cooling <brazil>Brazil</brazil> with <highlight>excellence</highlight> and <highlight>innovation</highlight>.",
