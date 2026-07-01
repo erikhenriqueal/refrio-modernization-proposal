@@ -94,8 +94,10 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar ref={navbarRef} />
-      <main className="p-2">
+      <div className="fixed top-0 left-0 w-full z-999">
+        <Navbar ref={navbarRef} />
+      </div>
+      <main className="p-2" style={{ marginTop: "var(--navbar-h, 0px)" }}>
         {/* Hero */}
         <section className="h-[calc(100dvh-var(--navbar-h,0px))] flex flex-col py-4 gap-4">
           {/* Slogan/Presentation */}
