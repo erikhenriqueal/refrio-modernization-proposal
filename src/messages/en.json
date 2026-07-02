@@ -15,8 +15,76 @@
     "slogan-title": "Cooling <brazil>Brazil</brazil> with <highlight>excellence</highlight> and <highlight>innovation</highlight>.",
     "slogan-subtitle": "Providing smart solutions for the national cooling chain for decades.",
 
+    "hero-cta-01": "Discover our Operation",
+    "hero-cta-02": "Get in Touch",
+
     "slider-home-01": "Infrastructure for storing various types of products at any temperature",
     "slider-home-02": "100% mechanized line ensuring speed and safety in cargo handling",
-    "slider-home-03": "Over 800,000 m³ of spacious, reversible facilities"
+    "slider-home-03": "Over 800,000 m³ of spacious, reversible facilities",
+
+    "sections": {
+      "about": {
+        "title": "Who We Are?",
+        "description-01": "Refrio is the ideal partner to support your warehousing, picking, and distribution logistics for various types of products.",
+        "description-02": "With cutting-edge technology, we have equipment to handle and maintain foods within the strictest quality standards and at any temperature.",
+        "description-03": "Our modern and efficient information systems enable the management of stored products.",
+        "description-04": "With 40 years of experience in the market, we are a complete, agile, and modern company with operations throughout the country."
+      },
+      "s&p": {
+        "title": "Storage & Picking",
+        "cards": {
+          "0": {
+            "title": "Tracking",
+            "description": "Processes and systems, such as WMS, enable real-time inventory monitoring, including end-to-end shipment tracking.",
+            "highlight": "Technology that drives efficiency."
+          },
+          "1": {
+            "title": "Agile Processes",
+            "description": "Efficient and accurate warehousing and distribution logistics solutions.",
+            "highlight": "Committed to operational excellence."
+          },
+          "2": {
+            "title": "Container Loading",
+            "description": "Load planning, weight distribution, balance calculations, and container and truck loading optimization.",
+            "highlight": "Safe and efficient loading."
+          },
+          "3": {
+            "title": "Palletizing",
+            "description": "Organizing goods on pallets to simplify storage and transportation.",
+            "highlight": "Better organization and faster distribution."
+          },
+          "4": {
+            "title": "Distribution",
+            "description": "A nationwide distribution network with a fleet prepared to transport all types of cargo across Brazil.",
+            "highlight": "Distribution that supports your business growth."
+          },
+          "5": {
+            "title": "Inventory Management",
+            "description": "Inventory is managed through integrated information systems and customized software solutions.",
+            "highlight": "Accurate and efficient inventory control."
+          },
+          "6": {
+            "title": "Freezing",
+            "description": "Facilities include freezing tunnels capable of handling up to 200 tons of products simultaneously at subzero temperatures.",
+            "highlight": "High-capacity freezing solutions."
+          },
+          "7": {
+            "title": "Unitization",
+            "description": "Consolidation of cargo with different sizes and weights to maximize space utilization.",
+            "highlight": "Greater efficiency and faster operations."
+          },
+          "8": {
+            "title": "Promotional Kits",
+            "description": "Packaging, repackaging, and promotional kit assembly services, including temperature-controlled operations.",
+            "highlight": "Value-added services for your business."
+          },
+          "9": {
+            "title": "Customer Service",
+            "description": "Fast and effective solutions tailored to our customers' needs and inquiries.",
+            "highlight": "Responsive and efficient customer support."
+          }
+        }
+      }
+    }
   }
 }

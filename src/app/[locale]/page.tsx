@@ -115,10 +115,10 @@ export default function HomePage() {
           {/* CTA */}
           <div className="px-2 flex flex-wrap gap-x-8 gap-y-2 justify-center text-center">
             <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
-              Conheça nossa atuação
+              {t("hero-cta-01")}
             </Anchor>
             <Anchor href={"#"} variant="primary" shapes={["roundy"]}>
-              Entre em contato
+              {t("hero-cta-02")}
             </Anchor>
           </div>
           {/* Carousel */}
@@ -162,28 +162,28 @@ export default function HomePage() {
         {/* Description */}
         <section id="about">
           <h1 className="py-8 text-center text-4xl font-bold text-primary-800">
-            Quem somos?
+            {t("sections.about.title")}
           </h1>
           <MultiSide className="gap-x-12 gap-y-8 *:max-w-sm">
             {/* Item 1 - Left */}
             <DescriptionItem
               icon={BsBoxSeam}
-              text="A Refrio é o parceiro ideal para apoiar a sua logística de armazenagem, picking e distribuição de diversos tipos de produtos."
+              text={t("sections.about.description-01")}
             />
             {/* Item 2 - Right */}
             <DescriptionItem
               icon={BsCpu}
-              text="Com tecnologia de ponta, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura."
+              text={t("sections.about.description-02")}
             />
             {/* Item 3 - Left */}
             <DescriptionItem
               icon={BsDice5}
-              text="Nossos sistemas de informação modernos e eficientes possibilitam o gerenciamento dos produtos armazenados."
+              text={t("sections.about.description-03")}
             />
             {/* Item 4 - Right */}
             <DescriptionItem
               icon={BsAward}
-              text="Com 40 anos de atuação no mercado, somos uma empresa completa, ágil e moderna, com atuação em todo o país."
+              text={t("sections.about.description-04")}
             />
           </MultiSide>
         </section>
@@ -192,68 +192,68 @@ export default function HomePage() {
           {/* Storage & Picking */}
           <div id="s&p">
             <h1 className="py-8 text-center text-4xl font-bold text-primary-800">
-              Armazenagem e Picking
+              {t("sections.s&p.title")}
             </h1>
             <div className="w-full px-4 flex flex-row flex-wrap justify-center gap-6 *:min-w-xs *:max-w-lg">
               <SolutionCard
                 icon={BsCompass}
-                title="Rastreamento"
-                description="Processos e sistemas, como o WMS, permitem acompanhar em tempo real o estoque, inclusive o rastreamento ponta a ponta."
-                highlight="Tecnologia para ganhar eficiência."
+                title={t("sections.s&p.cards.0.title")}
+                description={t("sections.s&p.cards.0.description")}
+                highlight={t("sections.s&p.cards.0.highlight")}
               />
               <SolutionCard
                 icon={BsClockHistory}
-                title="Processos Ágeis"
-                description="Oferta de soluções eficientes e precisas no segmento logístico de armazenagem e distribuição."
-                highlight="Busca pela excelência nos negócios."
+                title={t("sections.s&p.cards.1.title")}
+                description={t("sections.s&p.cards.1.description")}
+                highlight={t("sections.s&p.cards.1.highlight")}
               />
               <SolutionCard
                 icon={SlCalculator}
-                title="Estufagem"
-                description="Atividades de cálculo de pontos de equilíbrio de carga, balanceamento e distribuição de pesos e preenchimento de containers e baús."
-                highlight="Carregamento com segurança."
+                title={t("sections.s&p.cards.2.title")}
+                description={t("sections.s&p.cards.2.description")}
+                highlight={t("sections.s&p.cards.2.highlight")}
               />
               <SolutionCard
                 icon={LiaPalletSolid}
-                title="Paletização"
-                description="Ordenação das mercadorias unitizadas em pallets para facilitar a armazenagem e o transporte."
-                highlight="Melhor organização e agilidade na distribuição."
+                title={t("sections.s&p.cards.3.title")}
+                description={t("sections.s&p.cards.3.description")}
+                highlight={t("sections.s&p.cards.3.highlight")}
               />
               <SolutionCard
                 icon={BsGlobeAmericas}
-                title="Distribuição"
-                description="Malha de distribuição com capacidade para atender todo o Brasil, com frota preparada para transportar todos os tipos de carga."
-                highlight="Distribuição para o crescimento do seu negócio."
+                title={t("sections.s&p.cards.4.title")}
+                description={t("sections.s&p.cards.4.description")}
+                highlight={t("sections.s&p.cards.4.highlight")}
               />
               <SolutionCard
                 icon={BiBarChartAlt}
-                title="Gestão de Estoque"
-                description="Todo o estoque é controlado por meio de sistemas integrados de informação e softwares customizados."
-                highlight="Controle eficiente e preciso para os nossos clientes."
+                title={t("sections.s&p.cards.5.title")}
+                description={t("sections.s&p.cards.5.description")}
+                highlight={t("sections.s&p.cards.5.highlight")}
               />
               <SolutionCard
                 icon={BsThermometerSnow}
-                title="Congelamento"
-                description="Inclui túneis estruturados para movimentar simultaneamente até 200 toneladas de produtos em temperatura negativa."
-                highlight="Alta capacidade de congelamento."
+                title={t("sections.s&p.cards.6.title")}
+                description={t("sections.s&p.cards.6.description")}
+                highlight={t("sections.s&p.cards.6.highlight")}
               />
               <SolutionCard
                 icon={BsClipboard2Data}
-                title="Unitização"
-                description="Organização de diversos tipos de cargas de tamanhos e pesos diferentes para aproveitar melhor o espaço."
-                highlight="Mais agilidade e aumento de eficiência."
+                title={t("sections.s&p.cards.7.title")}
+                description={t("sections.s&p.cards.7.description")}
+                highlight={t("sections.s&p.cards.7.highlight")}
               />
               <SolutionCard
                 icon={BsStar}
-                title="Kits Promocionais"
-                description="Manuseio de embalagens, serviço de reembalagem e montagem de kits de produtos, incluindo em temperatura controlada."
-                highlight="Serviços diferenciados para sua empresa."
+                title={t("sections.s&p.cards.8.title")}
+                description={t("sections.s&p.cards.8.description")}
+                highlight={t("sections.s&p.cards.8.highlight")}
               />
               <SolutionCard
                 icon={BsTelephone}
-                title="Atendimento"
-                description="Apresentação de soluções rápidas e adequadas aos questionamentos dos clientes."
-                highlight="Agilidade e atendimento eficiente para nossos clientes."
+                title={t("sections.s&p.cards.9.title")}
+                description={t("sections.s&p.cards.9.description")}
+                highlight={t("sections.s&p.cards.9.highlight")}
               />
             </div>
           </div>

@@ -15,8 +15,76 @@
     "slogan-title": "Refrigerando o <brazil>Brasil</brazil> com <highlight>excelência</highlight> e <highlight>inovação</highlight>.",
     "slogan-subtitle": "Há décadas oferecendo soluções inteligentes para a cadeia de refrigeração nacional.",
 
+    "hero-cta-01": "Conheça nossa Atuação",
+    "hero-cta-02": "Entre em Contato",
+
     "slider-home-01": "Infra-estrutura para armazenar variados tipos de produtos, em qualquer temperatura",
     "slider-home-02": "Linha 100% mecanizada que garante agilidade e segurança na movimentação de carga",
-    "slider-home-03": "Mais de 800 mil m³ de instalações amplas e reversíveis"
+    "slider-home-03": "Mais de 800 mil m³ de instalações amplas e reversíveis",
+
+    "sections": {
+      "about": {
+        "title": "Quem Somos?",
+        "description-01": "A Refrio é o parceiro ideal para apoiar a sua logística de armazenagem, picking e distribuição de diversos tipos de produtos.",
+        "description-02": "Com tecnologia de ponta, contamos com equipamentos para movimentar e manter alimentos dentro dos mais rígidos padrões de qualidade e em qualquer temperatura.",
+        "description-03": "Nossos sistemas de informação modernos e eficientes possibilitam o gerenciamento dos produtos armazenados.",
+        "description-04": "Com 40 anos de atuação no mercado, somos uma empresa completa, ágil e moderna, com atuação em todo o país."
+      },
+      "s&p": {
+        "title": "Armazenagem & Picking",
+        "cards": {
+          "0": {
+            "title": "Rastreamento",
+            "description": "Processos e sistemas, como o WMS, permitem acompanhar em tempo real o estoque, inclusive o rastreamento ponta a ponta.",
+            "highlight": "Tecnologia para ganhar eficiência."
+          },
+          "1": {
+            "title": "Processos Ágeis",
+            "description": "Oferta de soluções eficientes e precisas no segmento logístico de armazenagem e distribuição.",
+            "highlight": "Busca pela excelência nos negócios."
+          },
+          "2": {
+            "title": "Estufagem",
+            "description": "Atividades de cálculo de pontos de equilíbrio de carga, balanceamento e distribuição de pesos e preenchimento de containers e baús.",
+            "highlight": "Carregamento com segurança."
+          },
+          "3": {
+            "title": "Paletização",
+            "description": "Ordenação das mercadorias unitizadas em pallets para facilitar a armazenagem e o transporte.",
+            "highlight": "Melhor organização e agilidade na distribuição."
+          },
+          "4": {
+            "title": "Distribuição",
+            "description": "Malha de distribuição com capacidade para atender todo o Brasil, com frota preparada para transportar todos os tipos de carga.",
+            "highlight": "Distribuição para o crescimento do seu negócio."
+          },
+          "5": {
+            "title": "Gestão de Estoque",
+            "description": "Todo o estoque é controlado por meio de sistemas integrados de informação e softwares customizados.",
+            "highlight": "Controle eficiente e preciso para os nossos clientes."
+          },
+          "6": {
+            "title": "Congelamento",
+            "description": "Inclui túneis estruturados para movimentar simultaneamente até 200 toneladas de produtos em temperatura negativa.",
+            "highlight": "Alta capacidade de congelamento."
+          },
+          "7": {
+            "title": "Unitização",
+            "description": "Organização de diversos tipos de cargas de tamanhos e pesos diferentes para aproveitar melhor o espaço.",
+            "highlight": "Mais agilidade e aumento de eficiência."
+          },
+          "8": {
+            "title": "Kits Promocionais",
+            "description": "Manuseio de embalagens, serviço de reembalagem e montagem de kits de produtos, incluindo em temperatura controlada.",
+            "highlight": "Serviços diferenciados para sua empresa."
+          },
+          "9": {
+            "title": "Atendimento",
+            "description": "Apresentação de soluções rápidas e adequadas aos questionamentos dos clientes.",
+            "highlight": "Agilidade e atendimento eficiente para nossos clientes."
+          }
+        }
+      }
+    }
   }
 }
