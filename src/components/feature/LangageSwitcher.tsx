@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FlagComponent, US, BR } from "country-flag-icons/react/3x2";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
@@ -7,6 +7,7 @@ import { useLanguageSwitcher } from "@/i18n/client";
 import { routing } from "@/i18n/routing";
 
 import { Button } from "../ui/button";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
 export interface LanguageObject {
   label: string;
@@ -40,22 +41,7 @@ export default function LanguageSwitcher() {
 
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        triggerRef.current &&
-        !triggerRef.current.contains(event.target as Node)
-      ) {
-        setOpen(false);
-      }
-    };
-
-    document.addEventListener("pointerdown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("pointerdown", handleClickOutside);
-    };
-  }, []);
+  useOutsideClick([triggerRef], () => setOpen(false));
 
   return (
     <div className="h-full relative">

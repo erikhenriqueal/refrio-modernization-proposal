@@ -8,6 +8,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import LanguageSwitcher from "./LangageSwitcher";
 import { Anchor, Button } from "../ui/button";
 import { Dropdown } from "../ui/dropdown";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
 const InternalAnchor: typeof Anchor = ({ href, children, ...props }) => (
   <Anchor target="_self" href={href} {...props}>
@@ -35,6 +36,13 @@ export default function Navbar({ ref }: { ref: Ref<HTMLElement> }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const solutionsLIRef = useRef<HTMLLIElement>(null);
+
+  const mbBtnRef = useRef<HTMLButtonElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useOutsideClick([mbBtnRef, navRef], () => {
+    setMobileMenuOpen(false);
+  });
 
   const t = useTranslations("Navbar");
 
@@ -69,6 +77,7 @@ export default function Navbar({ ref }: { ref: Ref<HTMLElement> }) {
           shapes={["roundy", "square"]}
           className="block sm:hidden min-w-12 px-3 py-3.5 z-999"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          ref={mbBtnRef}
         >
           <div
             className={
@@ -108,6 +117,7 @@ export default function Navbar({ ref }: { ref: Ref<HTMLElement> }) {
         </Button>
         {/* Navigation */}
         <div
+          ref={navRef}
           className={
             // Mobile Displaying
             (mobileMenuOpen ? "block" : "hidden") +
