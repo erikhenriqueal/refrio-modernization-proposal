@@ -36,7 +36,11 @@ interface VariantProps {
   shapes?: (keyof typeof SHAPES)[];
 }
 
-type ButtonProps = VariantProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = VariantProps &
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >;
 
 export function Button({
   variant,
